@@ -1,6 +1,6 @@
 package com.example;
 
-public class Rot13 {
+public class RotN {
 
     public String encode(String s) {
         if (s == null) return "";

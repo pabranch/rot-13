@@ -8,7 +8,7 @@ public class App {
     public static void main(String[] args) {
         String originalString = Stream.of(args).collect(Collectors.joining(" "));
 
-        Rot13 rotator = new Rot13();
+        RotN rotator = new RotN();
         System.out.println(rotator.encode(originalString));
     }
 
