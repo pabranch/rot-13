@@ -39,7 +39,7 @@ public class RotNTest {
     }
 
     @Test
-    public void encode_appliedTwice_returnsOriginal() {
+    public void encode_defaultAppliedTwice_returnsOriginal() {
         RotN r = new RotN();
         assertEquals(allAlpha, r.encode(r.encode(allAlpha)));
     }
@@ -49,6 +49,36 @@ public class RotNTest {
         RotN r = new RotN();
         assertEquals(
                 "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM",
+                r.encode(allAlpha));
+    }
+
+    @Test
+    public void encode_withDelta26_returnsOriginal() {
+        RotN r = new RotN(26);
+        assertEquals(allAlpha, r.encode(allAlpha));
+    }
+
+    @Test
+    public void encode_withSmallerDelta_works() {
+        RotN r = new RotN(5);
+        assertEquals(
+                "fghijklmnopqrstuvwxyzabcdeFGHIJKLMNOPQRSTUVWXYZABCDE",
+                r.encode(allAlpha));
+    }
+
+    @Test
+    public void encode_withLargerDelta_works() {
+        RotN r = new RotN(15);
+        assertEquals(
+                "pqrstuvwxyzabcdefghijklmnoPQRSTUVWXYZABCDEFGHIJKLMNO",
+                r.encode(allAlpha));
+    }
+
+    @Test
+    public void encode_withDeltaOver26_works() {
+        RotN r = new RotN(256);
+        assertEquals(
+                "wxyzabcdefghijklmnopqrstuvWXYZABCDEFGHIJKLMNOPQRSTUV",
                 r.encode(allAlpha));
     }
 }
