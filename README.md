@@ -17,5 +17,7 @@ This program will be called from the CLI like this:
 ### Other
 - The default rotation is 13, but you can pass in a different rotation via an environmental variable.
 - If you don't send in a rotation the default is 13, if you don't send a string to encode the default is "hello world"
+- You shall rotate both lowercase and uppercase characters
+- Ignore all other characters during encoding
 - Test your code using Mocha
 - Organize your code as appropriate
