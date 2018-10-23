@@ -1,0 +1,15 @@
+{
+  "name": "rott-n",
+  "version": "1.0.0",
+  "description": "encode text using rot-n algorithm",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "mocha",
+    "start": "node index.js"
+  },
+  "author": "chyld",
+  "license": "MIT",
+  "dependencies": {
+    "mocha": "^5.2.0"
+  }
+}
