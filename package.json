@@ -1,7 +1,7 @@
 {
-  "name": "rott-n",
+  "name": "rot-13",
   "version": "1.0.0",
-  "description": "encode text using rot-n algorithm",
+  "description": "encode text using rot-13 algorithm",
   "main": "index.mjs",
   "scripts": {
     "test": "mocha",
