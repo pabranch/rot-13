@@ -6,11 +6,8 @@ import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.nio.Buffer;
-import java.util.Arrays;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
 
 public class AppTest {
 
