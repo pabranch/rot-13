@@ -8,7 +8,10 @@ public class App {
     public static void main(String[] args) {
         String originalString = Stream.of(args).collect(Collectors.joining(" "));
 
-        RotN rotator = new RotN();
+        String deltaConfig = System.getenv("ROT");
+        int delta = deltaConfig != null ? Integer.valueOf(deltaConfig) : 13;
+        RotN rotator = new RotN(delta);
+
         System.out.println(rotator.encode(originalString));
     }
 
